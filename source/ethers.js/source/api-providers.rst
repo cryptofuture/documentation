@@ -1006,6 +1006,9 @@ Etherscan
 :sup:`prototype` . getEtherPrice ( )
     Returns a :ref:`Promise <promise>` with the price of ether in USD.
 
+:sup:`prototype` . getEtherPriceBtc ( )
+    Returns a :ref:`Promise <promise>` with the price of ether in BTC.
+
 :sup:`prototype` . getHistory ( addressOrName [ , startBlock :sup:`= 0` [ , endBlock :sup:`= "latest"` ] ] )
     Returns a :ref:`Promise <promise>` with an array of :ref:`Transaction Responses <transaction-response>`
     for each transaction to or from *addressOrName* between *startBlock* and *endBlock* (inclusive).
@@ -1018,6 +1021,11 @@ Etherscan
     // Getting the current Ethereum price
     etherscanProvider.getEtherPrice().then(function(price) {
         console.log("Ether price in USD: " + price);
+    });
+
+    // Getting the current Ethereum price in Bitcoin
+    etherscanProvider.getEtherPriceBtc().then(function(price) {
+        console.log("Ether price in BTC: " + price);
     });
 
 
